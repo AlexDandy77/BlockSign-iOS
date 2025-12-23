@@ -6,13 +6,30 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		47EB14282EFB44D900AA4DEB /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 47EB14272EFB44D900AA4DEB /* CryptoSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		47371F7D2E9C054A00E85230 /* BlockSign-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlockSign-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		47F3708A2EF6073F007C2954 /* Exceptions for "BlockSign-iOS" folder in "BlockSign-iOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 47371F7C2E9C054A00E85230 /* BlockSign-iOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		47371F7F2E9C054A00E85230 /* BlockSign-iOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				47F3708A2EF6073F007C2954 /* Exceptions for "BlockSign-iOS" folder in "BlockSign-iOS" target */,
+			);
 			path = "BlockSign-iOS";
 			sourceTree = "<group>";
 		};
@@ -23,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EB14282EFB44D900AA4DEB /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +83,7 @@
 			);
 			name = "BlockSign-iOS";
 			packageProductDependencies = (
+				47EB14272EFB44D900AA4DEB /* CryptoSwift */,
 			);
 			productName = "BlockSign-iOS";
 			productReference = 47371F7D2E9C054A00E85230 /* BlockSign-iOS.app */;
@@ -94,6 +113,9 @@
 			);
 			mainGroup = 47371F742E9C054900E85230;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				47EB14262EFB44D900AA4DEB /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 47371F7E2E9C054A00E85230 /* Products */;
 			projectDirPath = "";
@@ -256,6 +278,7 @@
 				DEVELOPMENT_TEAM = WSFZDZZ6S3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BlockSign-iOS/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -290,6 +313,7 @@
 				DEVELOPMENT_TEAM = WSFZDZZ6S3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BlockSign-iOS/Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -336,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		47EB14262EFB44D900AA4DEB /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		47EB14272EFB44D900AA4DEB /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 47EB14262EFB44D900AA4DEB /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 47371F752E9C054900E85230 /* Project object */;
 }
