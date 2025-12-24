@@ -8,7 +8,7 @@ enum KeychainError: Error {
 }
 
 class KeychainManager {
-    static let serviceName = "md.blocksign.BlockSign-iOS"
+    static let serviceName = "md.blocksign.BlockSign"
     
     // MARK: - Private Key Storage
     
