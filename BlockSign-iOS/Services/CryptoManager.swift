@@ -184,12 +184,8 @@ class Ed25519Pure {
 
 class SHA3 {
     static func hash512(_ data: Data) -> Data {
-        do {
-            let hashBytes = try data.sha3(.sha512)
-            return Data(hashBytes)
-        } catch {
-            fatalError("SHA3-512 hashing failed: \(error)")
-        }
+        let hashBytes = data.sha3(.sha512)
+        return Data(hashBytes)
     }
 }
 
