@@ -5,7 +5,7 @@ struct User: Codable, Identifiable {
     let email: String
     let fullName: String?
     let username: String?
-    let role: String  // Using String for flexibility - backend returns "USER" or "ADMIN"
+    let role: String
     
     // Optional fields that may not be in all responses
     let status: String?

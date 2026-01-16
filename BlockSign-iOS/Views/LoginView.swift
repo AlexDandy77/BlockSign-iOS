@@ -5,6 +5,7 @@ struct LoginView: View {
     @Environment(\.colorScheme) var colorScheme
     @State private var email: String = ""
     @State private var seedPhraseWords: [String] = Array(repeating: "", count: 12)
+    @State private var showRegistration: Bool = false
     @FocusState private var focusedField: Int?
     
     // Theme-aware colors
@@ -187,6 +188,19 @@ struct LoginView: View {
                 .padding(.horizontal)
                 .disabled(email.isEmpty)
             }
+            
+            // Create Account link
+            Button(action: { showRegistration = true }) {
+                Text("Don't have an account? ")
+                    .foregroundColor(secondaryTextColor) +
+                Text("Create one")
+                    .foregroundColor(AppTheme.primaryBlue)
+                    .fontWeight(.semibold)
+            }
+            .padding(.top, 8)
+        }
+        .sheet(isPresented: $showRegistration) {
+            RegistrationEmailView(viewModel: RegistrationViewModel())
         }
     }
     

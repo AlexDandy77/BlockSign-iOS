@@ -226,6 +226,24 @@ class KeychainManager {
         }
     }
     
+    static func deleteSeedPhrase() throws {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: serviceName,
+            kSecAttrAccount as String: "seed_phrase"
+        ]
+        SecItemDelete(query as CFDictionary)
+    }
+    
+    static func deletePrivateKey() throws {
+        let query: [String: Any] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: serviceName,
+            kSecAttrAccount as String: "ed25519_private_key"
+        ]
+        SecItemDelete(query as CFDictionary)
+    }
+    
     // MARK: - Clear All Tokens
     
     static func clearTokens() throws {

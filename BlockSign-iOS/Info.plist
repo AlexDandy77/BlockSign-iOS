@@ -4,5 +4,16 @@
 <dict>
 	<key>API_BASE_URL</key>
 	<string>https://api.blocksign.md</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>md.blocksign</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>blocksign</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>
